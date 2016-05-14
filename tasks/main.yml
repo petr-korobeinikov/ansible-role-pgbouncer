@@ -1,0 +1,11 @@
+---
+- name: install pgbouncer
+  apt: name=pgbouncer={{ pgbouncer_package_version }} state=present
+
+- name: copy pgbouncer config
+  template: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: "{{ pgbouncer_pgbouncer_ini_template }}", dest: /etc/pgbouncer/pgbouncer.ini }
+    - { src: "{{ pgbouncer_userlist_txt_template }}", dest: /etc/pgbouncer/userlist.txt }
+  notify:
+    restart pgbouncer

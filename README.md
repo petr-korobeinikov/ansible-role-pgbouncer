@@ -27,7 +27,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-        - role: ansible-role-pgbouncer
+        - role: pkorobeinikov.pgbouncer
           pgbouncer_package_version: 1.7.2-1.pgdg14.04+1
           pgbouncer_pgbouncer_ini_template: pgbouncer/pgbouncer.ini.j2
           pgbouncer_userlist_txt_template: pgbouncer/userlist.txt.j2

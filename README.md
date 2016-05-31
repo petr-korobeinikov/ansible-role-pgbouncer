@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/pkorobeinikov/ansible-role-pgbouncer.svg?branch=master)](https://travis-ci.org/pkorobeinikov/ansible-role-pgbouncer)
 
-ansible-role-pgbouncer
-======================
+pkorobeinikov.pgbouncer
+=======================
 
 Pgbouncer installation.
 
@@ -13,7 +13,7 @@ You must provide your own `pgbouncer.ini.j2` and `userlist.txt.j2` templates.
 Role Variables
 --------------
 
-* `pgbouncer_package_version` is an exact package version, e.g. `1.7.2-1.pgdg14.04+1`
+* `pgbouncer_package_version` is an exact package version, e.g. `1.7.2-1.pgdg14.04+1`.
 * `pgbouncer_pgbouncer_ini_template` is a path to `pgbouncer.ini.j2` template within current playbook.
 * `pgbouncer_userlist_txt_template` is a path to `userlist.txt.j2` template within current playbook.
 
